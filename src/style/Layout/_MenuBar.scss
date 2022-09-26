@@ -1,0 +1,135 @@
+.menu-bar {
+    &.v-card {
+        width: $menu-bar__width-active;
+        height: 100vh !important;
+        border-radius: 0 0 0 0 !important;
+        padding: 20px 20px 24px 18px;
+        position: fixed !important;
+        top: 0;
+        left: 0;
+        z-index: 99;
+        overflow: visible;
+    }
+
+    .v-card__title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 42px !important;
+    }
+
+    .v-list {
+        margin-top: 40px;
+    }
+
+    .v-list-item {
+        justify-content: center;
+        padding: 0 !important;
+
+        &:hover {
+            opacity: .8;
+        }
+
+        &::before {
+            display: none;
+        }
+
+        span {
+            display: none;
+        }
+
+        * {
+            color: $gray !important;
+        }
+
+        &.v-list-item--active {
+            * {
+                color: $primary !important;
+            }
+        }
+    }
+    .v-list-item--active {
+        opacity: 1 !important;
+    }
+
+    .v-list-group__items {
+        margin-left: 30px !important;
+        position: absolute;
+
+        .v-list-item__content {
+            padding: 18px 0 !important;
+        }
+    }
+
+    .v-list-group {
+        position: relative;
+        .v-list-item__icon {
+            display: none;
+        }
+    }
+
+    .v-list-group--active {
+        .v-list-group__header.v-list-item {
+            &:hover {
+                opacity: 1 !important;
+                .v-list-item {
+                    opacity: 1 !important;
+                }
+            }
+        }
+    }
+
+    .menu-bar_logo {
+        display: none !important;
+    }
+
+    .menu-bar_nav {
+        height: calc(100% - 40px);
+    }
+
+    +main {
+        &.v-main {
+            width: calc(100% - #{$menu-bar__width-active}) !important;
+            margin-left: $menu-bar__width-active;
+        }
+    }
+
+    // MenuBar 展開樣式
+    &.active {
+        width: $menu-bar__width;
+
+        .v-card__title {
+            justify-content: space-between;
+        }
+
+        .menu-bar_logo {
+            margin-left: -5px !important;
+            display: inline-block !important;
+        }
+
+        +main {
+            &.v-main {
+                width: calc(100% - #{$menu-bar__width}) !important;
+                margin-left: $menu-bar__width;
+            }
+        }
+
+        .v-list-group {
+            .v-list-item__icon {
+                display: inline-flex;
+            }
+        }
+
+        .v-list-group__items {
+            position: static;
+        }
+
+        .v-list-item {
+            justify-content: flex-start;
+            span {
+                display: inline-block;
+            }
+        }
+
+    }
+}

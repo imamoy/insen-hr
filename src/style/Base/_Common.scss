@@ -1,0 +1,44 @@
+html,
+body {
+    font-size: 18px;
+    font-family: 'Noto Sans TC', 'Roboto', sans-serif !important;
+    margin: 0;
+    padding: 0;
+    @media screen and (max-width: 1600px) {
+        font-size: 15px;
+    }
+}
+
+#app {
+    font-size: 18px;
+    background-color: rgba($background,.8) !important;
+
+    * {
+        font-family: 'Noto Sans TC', 'Roboto', sans-serif !important;
+    }
+
+    .container {
+        padding: 24px 30px;
+    }
+
+    .text-caption {
+        font-size: 13px !important;
+    }
+
+    @media screen and (max-width: 1600px) {
+        font-size: 15px;
+    }
+}
+
+.full-width {
+    width: 100% !important;
+}
+
+.v-card {
+    border-radius: 10px !important;
+}
+
+.v-chip {
+    min-width: 68px;
+    justify-content: space-around;
+}

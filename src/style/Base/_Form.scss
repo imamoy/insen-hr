@@ -1,0 +1,95 @@
+.v-input {
+    &.v-text-field--filled {
+        .v-input__slot {
+            border-radius: 4px !important;
+            margin-bottom: 0 !important;
+
+            &::before,
+            &::after {
+                display: none;
+            }
+
+            .v-select__slot {
+                .v-select__selections {
+                    padding-top: 15px !important;
+                }
+            }
+        }
+
+        .v-label {
+            top: 15px;
+        }
+    }
+    &.v-text-field {
+        .v-text-field__details {
+            margin-top: 10px !important;
+        }
+    }
+    &.v-input--is-disabled:not(.v-input--is-readonly) {
+        opacity: .8;
+    }
+    &.select-hide-dropdown {
+        .v-input__append-inner {
+            display: none;
+        }
+    }
+    &.calendar-year-select, &.calendar-month-select {
+        .v-input__slot {
+            padding: 0 5px !important;
+        }
+    }
+    &.calendar-year-select {
+        max-width: 140px;
+    }
+    &.calendar-month-select {
+        max-width: 95px;
+    }
+}
+
+.filter-bar {
+    .col {
+        &:first-child {
+            .v-input {
+                &.v-text-field--filled {
+                    .v-input__slot {
+                        border-radius: 10px 0 0 10px !important;
+                    }
+                }
+            }
+        }
+
+        &:last-child {
+            .v-input {
+                &.v-text-field--filled {
+                    .v-input__slot {
+                        border-radius: 0 10px 10px 0 !important;
+                    }
+                }
+            }
+        }
+    }
+
+    .v-input {
+        .v-input__slot {
+            border-right: 1px solid $line  !important;
+        }
+
+        &.v-text-field--filled {
+            .v-input__slot {
+                border-radius: 0 !important;
+            }
+        }
+    }
+}
+.v-simple-checkbox--disabled {
+    opacity: .2;
+}
+
+.required::after {
+    content: "*";
+    position: absolute;
+    top: 16px;
+    left: 10px;
+    font-size: 21px;
+    color: #ff5252;
+}
